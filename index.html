@@ -1,78 +1,274 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Amaris — Contact</title>
-  <meta name="description" content="Amaris — connect with us on WhatsApp, TikTok, Instagram, Facebook, phone, or website." />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-  <style>
-    :root{
-      --bg:#ffffff;          /* page background (white) */
-      --card:#6b0f2b;        /* maroon buttons */
-      --text:#ffffff;        /* white text inside buttons */
-      --outside:#000000;     /* black text outside buttons */
-      --radius:999px;
-      --shadow:0 10px 30px rgba(0,0,0,.15);
-      --maxw:820px;
-    }
-    *{box-sizing:border-box; margin:0; padding:0}
-    body{
-      margin:0; display:flex; min-height:100vh; align-items:center; justify-content:center;
-      background:var(--bg); color:var(--outside); font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Arial,sans-serif;
-      -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
-    }
-    .wrap{width:100%; max-width:var(--maxw); padding:48px 20px 60px; text-align:center}
-    .logo{display:flex; align-items:center; justify-content:center; margin-bottom:18px}
-    .logo img{width:180px; height:auto}
-    .tagline{opacity:.9; font-size:18px; line-height:1.5; max-width:48ch; margin:0 auto 28px}
-    .list{display:grid; gap:16px; margin:20px auto 36px; max-width:740px}
-    .cta{
-      appearance:none; border:none; outline:0; text-decoration:none; display:block; text-align:center; width:100%;
-      padding:20px 24px; background:var(--card); color:var(--text); font-weight:800; font-size:20px; border-radius:var(--radius);
-      box-shadow:var(--shadow); transition:transform .05s ease, filter .15s ease;
-    }
-    .cta:hover{transform:translateY(-2px)}
-    .cta:active{transform:translateY(2px)}
-    .cta small{display:block; font-weight:600; opacity:.95; font-size:14px; margin-top:4px}
-    .contact-section{
-      margin-top:30px; font-size:20px;
-    }
-    .contact-section a{
-      color:var(--outside); text-decoration:none; display:block; margin:6px 0;
-    }
-    footer{margin-top:40px; text-align:center; opacity:.7; font-size:14px; color:var(--outside)}
-    @media (max-width:480px){
-      .logo img{width:150px}
-      .cta{font-size:18px; padding:18px}
-    }
-  </style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<title>AMARIS | Period Care Package</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Inter', sans-serif;
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:20px;
+    overflow-x:hidden;
+
+    background:
+    radial-gradient(circle at top left, rgba(165, 41, 94, 0.08), transparent 35%),
+    radial-gradient(circle at bottom right, rgba(133, 11, 66, 0.08), transparent 30%),
+    linear-gradient(180deg, #FFF8F5 0%, #F9ECE8 50%, #F4E1DB 100%);
+}
+
+.phone-container{
+    width:100%;
+    max-width:430px;
+}
+
+.card{
+    background: rgba(255,255,255,0.55);
+    backdrop-filter: blur(18px);
+    border-radius:40px;
+    padding:40px 25px;
+    box-shadow:
+    0 20px 50px rgba(98, 18, 53, 0.12),
+    inset 0 1px 0 rgba(255,255,255,0.6);
+    border:1px solid rgba(255,255,255,0.6);
+}
+
+.logo{
+    width:110px;
+    display:block;
+    margin:0 auto 15px;
+}
+
+.brand{
+    text-align:center;
+}
+
+.brand h1{
+    font-family:'Cormorant Garamond', serif;
+    color:#72073D;
+    font-size:58px;
+    letter-spacing:4px;
+    font-weight:700;
+}
+
+.subtitle{
+    color:#C56A7A;
+    font-size:18px;
+    font-weight:600;
+    margin-top:-5px;
+}
+
+.divider{
+    width:70px;
+    height:2px;
+    background:#D7A3AD;
+    margin:20px auto;
+    border-radius:10px;
+}
+
+.tagline{
+    text-align:center;
+    color:#674A53;
+    font-size:15px;
+    line-height:1.9;
+    margin-bottom:30px;
+}
+
+.button-group{
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+}
+
+.link-btn{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    text-decoration:none;
+    background:#fff;
+    padding:18px 22px;
+    border-radius:28px;
+    box-shadow:0 10px 30px rgba(93, 24, 48, 0.08);
+    transition:0.3s ease;
+    color:#54172F;
+}
+
+.link-btn:hover{
+    transform:translateY(-4px);
+    box-shadow:0 16px 35px rgba(93,24,48,0.15);
+}
+
+.left{
+    display:flex;
+    align-items:center;
+    gap:16px;
+}
+
+.icon{
+    width:55px;
+    height:55px;
+    border-radius:50%;
+    background:#FAEAEA;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:26px;
+}
+
+.text{
+    font-size:18px;
+    font-weight:600;
+}
+
+.arrow{
+    font-size:26px;
+    color:#C56A7A;
+}
+
+.footer{
+    margin-top:35px;
+    text-align:center;
+}
+
+.footer-line{
+    width:120px;
+    height:1px;
+    background:#DAB4BB;
+    margin:0 auto 18px;
+}
+
+.promise{
+    font-family:'Cormorant Garamond', serif;
+    font-size:34px;
+    color:#8E355A;
+    font-style:italic;
+}
+
+.promise-sub{
+    color:#9E7381;
+    font-size:14px;
+    margin-top:8px;
+}
+
+@media(max-width:480px){
+
+.brand h1{
+    font-size:48px;
+}
+
+.text{
+    font-size:16px;
+}
+
+.card{
+    padding:35px 20px;
+}
+
+}
+
+</style>
 </head>
+
 <body>
-  <main class="wrap">
-    <div class="logo">
-      <img src="6.png" alt="Amaris logo" />
-    </div>
-    <p class="tagline">Connect with us on your preferred channel.</p>
 
-    <div class="list" aria-label="Contact links">
-      <a class="cta" href="https://wa.me/23274590216?text=Hi%20Amaris%2C%20I%27d%20like%20to%20make%20an%20enquiry" target="_blank" rel="noopener">Chat with Us on WhatsApp</a>
-      <a class="cta" href="https://www.tiktok.com/@the.luxe.shoppe_?_t=ZM-90Qqg3MTWwK&_r=1" target="_blank" rel="noopener">Follow Us on TikTok</a>
-      <a class="cta" href="https://www.instagram.com/the.luxe.shoppe_?igsh=MTM3eXZsdGJzaXJ3Zw%3D%3D&utm_source=qr" target="_blank" rel="noopener">Visit Our Instagram</a>
-      <a class="cta" href="https://www.facebook.com/share/16jXBeGAGZ/?mibextid=wwXIfr" target="_blank" rel="noopener">Follow Us on Facebook</a>
-      <a class="cta" href="#" target="_blank" rel="noopener">Visit Our Website</a>
-    </div>
+<div class="phone-container">
 
-    <div class="contact-section">
-      <a href="tel:+23276599261">📞 +232 76 599261</a>
-    </div>
+<div class="card">
 
-    <footer>
-      © <span id="y"></span> Amaris. All rights reserved.
-    </footer>
-  </main>
-  <script>document.getElementById('y').textContent=new Date().getFullYear();</script>
+<img src="6.png" class="logo" alt="Amaris Logo">
+
+<div class="brand">
+<h1>AMARIS</h1>
+<p class="subtitle">Period Care Package</p>
+</div>
+
+<div class="divider"></div>
+
+<p class="tagline">
+A promise of love, care & comfort — because every woman deserves confidence, dignity and support.
+</p>
+
+<div class="button-group">
+
+<a href="https://wa.me/23276599261" target="_blank" class="link-btn">
+
+<div class="left">
+<div class="icon">💬</div>
+<div class="text">Chat with Us on WhatsApp</div>
+</div>
+
+<div class="arrow">›</div>
+</a>
+
+
+<a href="https://www.tiktok.com/@amaris.co.sl?_r=1&_t=ZS-96V00G0CWSi" target="_blank" class="link-btn">
+
+<div class="left">
+<div class="icon">🎵</div>
+<div class="text">Follow Us on TikTok</div>
+</div>
+
+<div class="arrow">›</div>
+</a>
+
+
+<a href="https://www.instagram.com/amaris.co.sl?igsh=cTd4NTlyMG50amJq" target="_blank" class="link-btn">
+
+<div class="left">
+<div class="icon">📷</div>
+<div class="text">Visit Our Instagram</div>
+</div>
+
+<div class="arrow">›</div>
+</a>
+
+
+<a href="https://amarisapp.netlify.app/" target="_blank" class="link-btn">
+
+<div class="left">
+<div class="icon">🌐</div>
+<div class="text">Visit Our Website</div>
+</div>
+
+<div class="arrow">›</div>
+</a>
+
+</div>
+
+<div class="footer">
+
+<div class="footer-line"></div>
+
+<div class="promise">
+A Promise of Love
+</div>
+
+<div class="promise-sub">
+AMARIS © 2026
+</div>
+
+</div>
+
+</div>
+
+</div>
+
 </body>
 </html>
